@@ -40,12 +40,9 @@ Sub MYSDLoop():
             
                         'Create Conditional Formatting based on the outcome of the yearly change, green (value > 0), red (value < 0)
                         If ws.Cells(TickerSymbol, 10).Value > 0 Then
-                        ws.Cells(TickerSymbol, 10).Interior.ColorIndex = 4
-                    
+                        ws.Cells(TickerSymbol, 10).Interior.ColorIndex = 4   
                 Else
-                
                 ws.Cells(TickerSymbol, 10).Interior.ColorIndex = 3
-                    
                 End If
                     
                 'Caluclating Percent Change Column pulling data from percentage columns
@@ -54,9 +51,7 @@ Sub MYSDLoop():
                 ws.Cells(TickerSymbol, 11).Value = Format(Percent, "Percent")
             
                 Else
-            
                 ws.Cells(TickerSymbol, 11).Value = Format(0, "Percent")
-            
                 End If
         
                 'Calculating Total Stock Volume column, pulling data from the original volume column
@@ -65,7 +60,7 @@ Sub MYSDLoop():
                 'Start new row for every new Ticker
                 TickerSymbol = TickerSymbol + 1
                 j = i + 1
-            
+    
             End If
         
     Next i
@@ -86,9 +81,7 @@ Sub MYSDLoop():
                     ws.Cells(4, 16).Value = ws.Cells(i, 9).Value
                 
                     Else
-                    
                     GreatestVol = GreatestVol
-                    
                     End If
                 
                 'Calculated value for greatest % increase
@@ -98,9 +91,7 @@ Sub MYSDLoop():
                     ws.Cells(2, 16).Value = ws.Cells(i, 9).Value
                     
                     Else
-                    
                     GreatestInc = GreatestInc
-                    
                     End If
                 
                 'Calculated value for greatest % decrease
@@ -110,9 +101,7 @@ Sub MYSDLoop():
                     ws.Cells(3, 16).Value = ws.Cells(i, 9).Value
                     
                     Else
-                    
                     GreatestDec = GreatestDec
-                    
                     End If
                     
                 'Formatting the outcome of the Ticker values from P2, P3, P4
