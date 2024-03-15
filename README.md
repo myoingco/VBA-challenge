@@ -7,7 +7,7 @@ Utilize VBA scripting to analyze generated stock market data.
 - [Getting Started](#getting-started)
 - [Build Process](#build-process)
 - [Considerations](#considerations)
-- [References] (#references)
+- [References](#references)
 
 ## Introduction
 
